@@ -33,7 +33,7 @@ function Dashboard() {
       // Fetch user's complaints
       const userId = parsedUser.id || parsedUser._id;
       if (userId) {
-        axios.get(`http://127.0.0.1:5000/api/complaints/user/${userId}`, {
+        axios.get(`https://complaint-management-system-abw9.onrender.com/api/complaints/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         })
         .then((res) => {

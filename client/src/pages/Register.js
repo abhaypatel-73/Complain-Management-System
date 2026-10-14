@@ -32,7 +32,7 @@ function Register() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/auth/register",
+        "https://complaint-management-system-abw9.onrender.com/api/auth/register",
         user
       );
 

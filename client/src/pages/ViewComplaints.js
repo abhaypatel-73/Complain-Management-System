@@ -29,8 +29,8 @@ function ViewComplaints() {
 
       // Admin fetches all, normal user fetches their own
       const endpoint = parsedUser.role === "admin"
-        ? "http://127.0.0.1:5000/api/complaints"
-        : (userId ? `http://127.0.0.1:5000/api/complaints/user/${userId}` : "http://127.0.0.1:5000/api/complaints");
+        ? "https://complaint-management-system-abw9.onrender.com/api/complaints"
+        : (userId ? `https://complaint-management-system-abw9.onrender.com/api/complaints/user/${userId}` : "https://complaint-management-system-abw9.onrender.com/api/complaints");
 
       const res = await axios.get(endpoint, {
         headers: {
@@ -56,7 +56,7 @@ function ViewComplaints() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://127.0.0.1:5000/api/complaints/${id}/status`,
+        `https://complaint-management-system-abw9.onrender.com/api/complaints/${id}/status`,
         { status },
         {
           headers: {
@@ -82,7 +82,7 @@ function ViewComplaints() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://127.0.0.1:5000/api/complaints/${id}`, {
+      await axios.delete(`https://complaint-management-system-abw9.onrender.com/api/complaints/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

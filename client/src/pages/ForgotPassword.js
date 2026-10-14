@@ -35,7 +35,7 @@ function ForgotPassword() {
 
     try {
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/auth/forgot-password",
+        "https://complaint-management-system-abw9.onrender.com/api/auth/forgot-password",
         {
           email,
           newPassword,

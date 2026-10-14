@@ -60,7 +60,7 @@ function CreateComplaint() {
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/complaints",
+        "https://complaint-management-system-abw9.onrender.com/api/complaints",
         complaint,
         {
           headers: {

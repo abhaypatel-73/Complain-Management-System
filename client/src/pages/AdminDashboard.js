@@ -31,7 +31,7 @@ function AdminDashboard() {
         }
       }
 
-      const res = await axios.get("http://127.0.0.1:5000/api/complaints", {
+      const res = await axios.get("https://complaint-management-system-abw9.onrender.com/api/complaints", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://127.0.0.1:5000/api/complaints/${id}/status`,
+        `https://complaint-management-system-abw9.onrender.com/api/complaints/${id}/status`,
         { status },
         {
           headers: {
@@ -93,7 +93,7 @@ function AdminDashboard() {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://127.0.0.1:5000/api/complaints/${id}`, {
+      await axios.delete(`https://complaint-management-system-abw9.onrender.com/api/complaints/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
